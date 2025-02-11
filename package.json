@@ -1,5 +1,5 @@
 {
-  "name": "micro-ordinals",
+  "name": "@lifofifoX/micro-ordinals",
   "version": "0.2.0",
   "description": "Manage ordinals, inscriptions and runes using scure-btc-signer",
   "files": [
