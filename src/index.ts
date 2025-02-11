@@ -49,6 +49,7 @@ const TagEnum = {
   delegate: 11,
   rune: 13,
   note: 15,
+  properties: 17,
   // Unrecognized even tag makes inscription unbound
   // unbound: 66,
   // Odd fields are ignored
@@ -68,6 +69,7 @@ export type TagCodersType = {
   delegate: P.Coder<string, Uint8Array>;
   rune: P.CoderType<bigint>; // U128
   note: P.CoderType<string>;
+  properties: P.CoderType<any>;
 };
 
 const TagCoders: TagCodersType = /* @__PURE__ */ {
@@ -82,6 +84,7 @@ const TagCoders: TagCodersType = /* @__PURE__ */ {
   note: P.string(null),
   // unbound: P.bytes(null),
   // nop: P.bytes(null),
+  properties: CBOR,
 };
 
 export type Tags = Partial<{
